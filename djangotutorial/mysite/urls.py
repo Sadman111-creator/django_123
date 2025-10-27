@@ -1,8 +1,10 @@
+# mysite/urls.py
 from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path("polls/", include("polls.urls")),
+    # YALNIZ BİR DƏFƏ OLMALIDIR:
+    path("polls/", include("polls.urls")), 
     path("admin/", admin.site.urls),
-     path('', include('polls.urls'))
+    # Əgər başqa yerdə təkrar qeydiyyat yoxdursa, problem həll olunacaq.
 ]
